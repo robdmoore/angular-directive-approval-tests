@@ -1,0 +1,20 @@
+{
+  "name": "angular-directive-approval-tests",
+  "version": "1.0.0",
+  "dependencies": {
+    "approvals-server": {
+      "version": "0.1.1",
+      "from": "approvals-server@~0.1",
+      "dependencies": {
+        "approvals": {
+          "version": "0.0.27",
+          "from": "approvals@^0.0.25"
+        },
+	"bl": {
+          "version": "0.9.4",
+	  "from": "bl@^0.9.4"
+	}
+      }
+    }
+  }
+}
