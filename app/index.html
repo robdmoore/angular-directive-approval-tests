@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -8,6 +8,36 @@
     <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-app="myApp">
-    <script type="text/javascript" src="dist/myApp.js"></script>
+<div class="container">
+    <section>
+        <h1>Cars</h1>
+        <myapp-display-products category="car" product="car">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2>{{car.name}}</h2>
+                </div>
+                <div class="panel-body">
+                    <h3>{{car.creator}}</h3>
+                    <p>{{car.description}}</p>
+                </div>
+            </div>
+        </myapp-display-products>
+    </section>
+    <section>
+        <h1>Furniture</h1>
+        <myapp-display-products category="furniture" product="furniture">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>{{furniture.name}}</h2>
+                </div>
+                <div class="panel-body">
+                    <h3>{{furniture.creator}}</h3>
+                    <p>{{furniture.description}}</p>
+                </div>
+            </div>
+        </myapp-display-products>
+    </section>
+</div>
+<script type="text/javascript" src="dist/myApp.js"></script>
 </body>
 </html>

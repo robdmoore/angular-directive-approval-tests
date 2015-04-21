@@ -12,6 +12,7 @@ module.exports = function (grunt) {
         },
         src: {
             myApp: [
+                'app/myApp/app.js',
                 'app/myApp/*.js',
                 'app/myApp/!(*.spec).js'
             ]
