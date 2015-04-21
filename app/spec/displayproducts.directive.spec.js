@@ -6,7 +6,7 @@ describe("myapp-display-products", function () {
     beforeEach(DirectiveFixture.init);
 
     it("should output product information", function () {
-        HttpMocks.product.cars(DirectiveFixture);
+        HttpMocks.product.basicCars(DirectiveFixture);
 
         DirectiveFixture.verify(heredoc(function () {/*    
             <myapp-display-products category="car" product="car">

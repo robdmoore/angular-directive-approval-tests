@@ -24,13 +24,15 @@ DirectiveFixture.verify = function (markupToCompileAndVerify) {
         dom = $("<div />").append(dom.clone());
 
         // Remove Angular directives and classes
-        dom.find("[ng-*]").each(function(){
-            $.each(this.attributes, function(i, attrib) {
+        dom.find("*").each(function () {
+            if (this.attributes) {
                 var $this = $(this);
-                if (attrib.name.match(/^ng-/)) {
-                    $this.removeAttr(attrib.name);
-                }
-            });
+                $.each(this.attributes, function (i, attrib) {
+                    if (attrib && attrib.name.match(/^ng-/)) {
+                        $this.removeAttr(attrib.name);
+                    }
+                });
+            }
         });
         dom.find(".ng-scope").removeClass("ng-scope");
         dom.find(".ng-binding").removeClass("ng-binding");

@@ -1,4 +1,4 @@
-/// <vs SolutionOpened='dev' />
+/// <vs BeforeBuild='default' SolutionOpened='dev' />
 module.exports = function (grunt) {
     require('matchdep').filterDev('grunt-*').filter(function (task) { return task != 'grunt-cli'; }).forEach(grunt.loadNpmTasks);
     grunt.initConfig({
@@ -13,13 +13,12 @@ module.exports = function (grunt) {
         src: {
             myApp: [
                 'app/myApp/app.js',
-                'app/myApp/*.js',
-                'app/myApp/!(*.spec).js'
+                'app/myApp/*.js'
             ]
         },
         spec: {
             myApp: [
-                'app/myApp/*.spec.js'
+                'app/spec/*.spec.js'
             ],
             testhelpers: [
                 'node_modules/js-beautify/js/lib/beautify-html.js',

@@ -1,0 +1,8 @@
+<myapp-display-products category="car" product="car">
+    <div>
+        <div>car 1</div>
+    </div>
+    <div>
+        <div>car 2</div>
+    </div>
+</myapp-display-products>
